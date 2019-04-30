@@ -12,7 +12,7 @@ if you are under pythonanywhere, or
 
 if you are under your own environment.
 
-A Q-table implementation that tackles the puzzle can be found [here](https://github.com/simoninithomas/Deep_reinforcement_learning_Course/blob/master/Q%20learning/Q%20Learning%20with%20FrozenLake.ipynb) as a Jupyter notebook. In this repo, you will also find a version of the same code that you can simply run from the terminal:
+A Q-table implementation that tackles the puzzle can be found [here](https://github.com/simoninithomas/Deep_reinforcement_learning_Course/blob/master/Q_Learning_with_FrozenLakev2.ipynb) as a Jupyter notebook. In this repo, you will also find a version of the same code that you can simply run from the terminal:
 
 `python3 frozen_lake.py`
 
