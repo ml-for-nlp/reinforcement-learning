@@ -4,19 +4,14 @@
 
 To get you started with RL, play for a while with the Frozen Lake puzzle from the [OpenAI gym](https://gym.openai.com/envs/FrozenLake-v0/). To run the code, you will need to install the OpenAI gym by running:
 
-`pip3 install --user gym`
-
-if you are under pythonanywhere, or
-
-`sudo pip3 install gym`
-
-if you are under your own environment.
+    pip install gym
+    pip install pygame
 
 A Q-table implementation that tackles the puzzle can be found [here](https://github.com/simoninithomas/Deep_reinforcement_learning_Course/blob/master/Q_Learning_with_FrozenLakev2.ipynb) as a Jupyter notebook. In this repo, you will also find a version of the same code that you can simply run from the terminal:
 
-`python3 frozen_lake.py`
+    python3 frozen_lake.py
 
-Understand the environment and the steps taken by the algorithm. Try to modify the parameters to see their influence on the result.
+Understand the environment and the steps taken by the algorithm. Try to modify the parameters to see their influence on the result. Note that we have set rewards manually because of a bug in the gym. Do you understand what they do?
 
 
 ### Learning politeness
@@ -57,7 +52,7 @@ Run the code:
 
 First, have a look at the produced Q-table. Can you read it? Do you understand what it is saying? And what is happening at test time?
 
-Run the code several times. You should find that witht the given parameters, the system is not always as polite as it could be. Why is that?
+Run the code several times. You should find that with the given parameters, the system is not always as polite as it could be. Why is that?
 
 
 

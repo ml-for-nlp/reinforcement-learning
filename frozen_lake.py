@@ -9,23 +9,23 @@ import random
 
 
 
-env = gym.make("FrozenLake-v0")
+env = gym.make('FrozenLake-v1', desc=None,map_name="4x4", is_slippery=False)
 action_size = env.action_space.n
 state_size = env.observation_space.n
 
 qtable = np.zeros((state_size, action_size))
 #print(qtable)
 
-total_episodes = 10000        # Total episodes
-learning_rate = 0.5         # Learning rate
-max_steps = 50                # Max steps per episode
-gamma = 0.95                  # Discounting rate
+total_episodes = 50        # Total episodes
+learning_rate = 0.8         # Learning rate
+max_steps = 20              # Max steps per episode
+gamma = 0.5                 # Discounting rate
 
 # Exploration parameters
 epsilon = 1.0                 # Exploration rate
 max_epsilon = 1.0             # Exploration probability at start
 min_epsilon = 0.01            # Minimum exploration probability 
-decay_rate = 0.001            # Exponential decay rate for exploration prob
+decay_rate = 0.01            # Exponential decay rate for exploration prob
 
 # List of rewards
 rewards = []
@@ -58,6 +58,12 @@ for episode in range(total_episodes):
 
         # Take the action (a) and observe the outcome state(s') and reward (r)
         new_state, reward, done, info = env.step(action)
+        
+        #Somehow, the environment does not give negative rewards for game over, so hack it:
+        if done and reward == 0:
+            reward = -5
+        if new_state == state:
+            reward = -1
         print("NEW STATE:",new_state,"REWARD:",reward)
 
         # Update Q(s,a):= Q(s,a) + lr [R(s,a) + gamma * max Q(s',a') - Q(s,a)]
@@ -71,7 +77,7 @@ for episode in range(total_episodes):
         state = new_state
         
         # If done (if we're dead) : finish episode
-        if done == True: 
+        if done: 
             print("GAME OVER.\n\n")
             break
         
