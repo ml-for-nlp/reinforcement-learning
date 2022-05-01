@@ -1,5 +1,5 @@
-'''Code from python notebook by simoninithomas
-available at https://github.com/simoninithomas/Deep_reinforcement_learning_Course/blob/master/Q%20learning/Q%20Learning%20with%20FrozenLake.ipynb
+'''Modification of the code available in python notebook by simoninithomas
+https://github.com/simoninithomas/Deep_reinforcement_learning_Course/blob/master/Q%20learning/Q%20Learning%20with%20FrozenLake.ipynb
 '''
 
 

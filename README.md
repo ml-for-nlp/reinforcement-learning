@@ -7,7 +7,9 @@ To get you started with RL, play for a while with the Frozen Lake puzzle from th
     pip install gym
     pip install pygame
 
-A Q-table implementation that tackles the puzzle can be found [here](https://github.com/simoninithomas/Deep_reinforcement_learning_Course/blob/master/Q_Learning_with_FrozenLakev2.ipynb) as a Jupyter notebook. In this repo, you will also find a version of the same code that you can simply run from the terminal:
+A Q-table implementation that tackles the puzzle can be found [here](https://github.com/simoninithomas/Deep_reinforcement_learning_Course/blob/master/Q_Learning_with_FrozenLakev2.ipynb) as a Jupyter notebook. (But beware, it does not work for the gym v1!) 
+
+In this repo, you will find a revised version of the code for gym v1, which you can simply run from the terminal:
 
     python3 frozen_lake.py
 
